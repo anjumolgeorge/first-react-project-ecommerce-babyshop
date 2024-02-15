@@ -1,0 +1,20 @@
+.nav-title {
+    padding: 10px;
+    font-size: 35px;
+  }
+  .nav-links {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .nav {
+    background: #057174 ;
+    
+  }
+  
+  .underline-Shops:hover {
+    text-decoration: underline;
+  }
+  
+  .underline-about:hover {
+    text-decoration: underline;
+  }

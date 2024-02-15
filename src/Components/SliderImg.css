@@ -1,0 +1,20 @@
+/* SliderImg.css */
+
+.slider-img1 {
+    width: 70%; 
+    height: 220px;
+
+  }
+  .button {
+    background-color: red;
+    border-radius: 4px;
+    color: yellow;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: darkred;
+  }
+  
+  
+
