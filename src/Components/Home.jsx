@@ -11,20 +11,35 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div style={{ backgroundColor: 'lightgrey' }}>
+    <div style={{ backgroundColor: '#808080' }}>
       <NavBar />
       <Slider />
 
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '5% 0', padding: '0 10px' }}>
-        <div style={{ flex: '1', textAlign: 'center' }}>
-          <h1 style={{ color: '#FE7F9C', fontFamily: 'cursive', fontSize: '5vw' }}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          margin: '5% 0',
+          padding: '0 10px',
+        }}
+      >
+        <div style={{ textAlign: 'center', flex: '1', maxWidth: '600px' }}>
+          <h1
+            style={{
+              color: 'white',
+              fontFamily: 'cursive',
+              fontSize: '6vw',
+          
+            }}
+          >
             Stylish Outfits and Hot
             <p>Toys for Babies</p>
           </h1>
           <p>
-            <h6 style={{ color: 'brown', fontSize: '2vw' }}>
-              Get <h3 style={{ color: 'red', fontFamily: 'cursive' }}>35% off</h3> Latest Baby products !!*
-            </h6>
+            <span style={{ color: 'pink', fontSize: '2vw' }}>
+              Get <span style={{ color: 'yellow', fontFamily: 'cursive' }}>35% off</span> Latest Baby products !!*
+            </span>
           </p>
           <button
             style={{
@@ -34,6 +49,8 @@ const Home = () => {
               padding: '1vw 2vw',
               cursor: 'pointer',
               transition: 'background-color 0.3s ease',
+              fontSize: '2vw',
+              
             }}
             onMouseOver={(e) => (e.target.style.backgroundColor = 'orange')}
             onMouseOut={(e) => (e.target.style.backgroundColor = 'pink')}
@@ -44,16 +61,16 @@ const Home = () => {
         </div>
         <div style={{ flex: '1', textAlign: 'center' }}>
           <img
-            style={{ maxWidth: '100%', height: 'auto' }}
+            style={{ width: '100%', maxWidth: '60rem', height: 'auto' }}
             src='/babypic.png'
             alt='cover'
           />
         </div>
       </div>
-      
+
       <Banners />
-      <Extracards/>
-      
+      <Extracards />
+
       <Footer />
     </div>
   );

@@ -11,16 +11,16 @@ const Nutritions = () => {
  const navigate=useNavigate()
  const filterNutrition =product.filter((item)=>item.category==='nutrition')
   return (
-    <div style={{backgroundColor:'lightgrey'}}>
+    <div style={{backgroundColor:'#808080'}}>
       
 <ShopNav/> 
 
 
       
-     <img style={{height:'25rem' , width:'95%', marginTop:'20px'}} src="https://www.cerelac.co.uk/sites/default/files/2023-06/m-banner-prod-wheat_with_milk.jpg" alt="" />
+     <img style={{height:'27rem' , width:'100%', marginTop:'20px'}} src="https://www.cerelac.co.uk/sites/default/files/2023-06/m-banner-prod-wheat_with_milk.jpg" alt="" />
    
       <Container>
-        <h1 style={{ textAlign: "center", padding: "10px" }}>Nutritions</h1>
+        <h1 style={{ textAlign: "center", padding: "10px",fontFamily: 'cursive',color : '#FBFCFC',fontSize:'6rem'}}>Nutritions</h1>
         <hr />
 
         <div className="d-flex align-items-center justify-content-center flex-wrap">

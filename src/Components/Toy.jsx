@@ -5,52 +5,60 @@ import { Button, Card, CardBody, CardImg, CardTitle, Container } from 'react-boo
 import { useNavigate } from 'react-router-dom';
 
 const Toy = () => {
+  const { product } = useContext(userLogin);
+  const navigate = useNavigate();
+  const filterToy = product.filter((item) => item.category === 'toy');
 
- const {product}=useContext(userLogin)
- const navigate=useNavigate()
-const filtertoy= product.filter((item)=>item.category==='toy')
   return (
-    <div style={{backgroundColor:'lightgrey'}}>
-      
-<ShopNav/> 
-<img style={{marginTop:'20px'}}src="https://www.babycarestores.in/media/media/landingpageSlider/WEB_BANNER_TOYS_psd_roJksT2.jpg" alt="" />
-
- <Container>
-        <h1 style={{ textAlign: "center", padding: "10px" }}>Toys</h1>
+    <div style={{ backgroundColor: '#808080' }}>
+      <ShopNav />
+      <img
+        style={{ marginTop: '20px', width: '100%', height: 'auto' }} 
+        src="https://www.babycarestores.in/media/media/landingpageSlider/WEB_BANNER_TOYS_psd_roJksT2.jpg"
+        alt=""
+      />
+      <Container>
+        <h1 style={{ textAlign: 'center', padding: '10px',fontFamily: 'cursive',color : '#FBFCFC',fontSize:'6rem' }}>Toys</h1>
         <hr />
 
         <div className="d-flex align-items-center justify-content-center flex-wrap">
-          {filtertoy.map((item) => (
+          {filterToy.map((item) => (
             <div
               key={item.id}
               className="d-flex align-items-center justify-content-center flex-wrap"
+              style={{ width: '100%', maxWidth: '300px' }} 
             >
               <Card
                 className="shadow p-3 m-2 bg-body-tertiary rounded"
                 style={{
-                  width: "18rem",
-                  height: "28rem",
-                  alignItems: "center",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
+                  width: '100%',
+                  height: '100%',
+                  alignItems: 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
                 }}
               >
                 <CardBody>
                   <CardImg
-                    style={{ height: "15rem" }}
+                    style={{ width: '100%', height: '15rem', objectFit: 'cover' }} 
                     className="p-2"
                     variant="top"
                     src={item.image}
                   />
                   <br />
                   <br />
-                  <CardTitle style={{ textAlign: "center" }}> {item.title}  </CardTitle>
+                  <CardTitle style={{ textAlign: 'center' }}>{item.title}</CardTitle>
                   <br />
-                  <h6 style={{ textAlign: "center" }}>Price:{item.Price}</h6>
+                  <h6 style={{ textAlign: 'center' }}>Price: {item.Price}</h6>
                 </CardBody>
                 <div>
-                  <Button onClick={() => navigate(`/viewproduct/${item.id}`)}variant="outline-dark">View Product</Button>
+                  <Button
+                    onClick={() => navigate(`/viewproduct/${item.id}`)}
+                    variant="outline-dark"
+                  >
+                    View Product
+                  </Button>
                 </div>
               </Card>
             </div>
@@ -59,7 +67,6 @@ const filtertoy= product.filter((item)=>item.category==='toy')
       </Container>
     </div>
   );
-}
-
+};
 
 export default Toy;
